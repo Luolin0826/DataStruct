@@ -1,0 +1,8 @@
+{
+    "code-runner.executorMapByGlob": {
+
+        "pom.xml": "cd $dir && mvn clean package"
+    },
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.saveFileBeforeRun": true
+}

@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "less",
+        "*.wxs": "javascript",
+        "*.wxml": "wxml",
+        "stdlib.h": "c",
+        "listfunction.h": "c",
+        "limits": "c",
+        "stdio.h": "c"
+    }
+}
