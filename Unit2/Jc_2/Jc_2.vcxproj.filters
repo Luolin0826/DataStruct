@@ -15,19 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DLinkList.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkList.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_2_3.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <ClInclude Include="..\LinkList\Project1\LinkListFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LinkListFunction.h">
+    <ClCompile Include="..\LinkList\Project1\Jc_2_3.cpp">
       <Filter>源文件</Filter>
-    </ClInclude>
+    </ClCompile>
+    <ClCompile Include="Jc_2_4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
