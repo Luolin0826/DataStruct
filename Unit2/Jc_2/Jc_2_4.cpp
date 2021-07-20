@@ -15,14 +15,21 @@ LinkList GetLocation(LinkList A, ElemType e) {
 //求交集操作 如果A里有的B没有，那么删除。
 void Intersection(LinkList A, LinkList B) {
   int tmp;
+<<<<<<< HEAD
   LinkList per, p;  //前驱节点per，当前结点p
   per = A;
   p = per->next;  //定义的p结点可以有效防止出现空指针问题
+=======
+  LinkList per, p;
+  per = A;
+  p = per->next;
+>>>>>>> 80e2f9eb531533168205961d972fb2f5f9c82d5f
   while (p) {
     tmp = p->data;
     if (!GetLocation(B, tmp)) {
       per->next = p->next;
       free(p);
+<<<<<<< HEAD
       p = per->next;  //这里要注意，出现过内存泄漏的问题，这句话的本意是考察下一节点
     } else  //找到了一个同样的结点，这个节点的地址是p
     {
@@ -53,6 +60,15 @@ void Union(LinkList A, LinkList B) {
     A = A->next;
   }
   A->next = B->next;
+=======
+      p=per->next;//这里要注意，出现过内存泄漏的的问题，这句话的本意是考察下一节点
+    } else  //找到了一个同样的结点，这个节点的地址是p
+    {
+      per = p;
+      p = p->next;
+    }
+  }
+>>>>>>> 80e2f9eb531533168205961d972fb2f5f9c82d5f
 }
 
 int main(int argc, char** argv) {
@@ -65,11 +81,15 @@ int main(int argc, char** argv) {
   for (int i = 4; i < 12; i++) {
     InsertNextNode(B, i);
   }
+<<<<<<< HEAD
   //Intersection(A, B);
   //printf("交集是：");
   //printfLinkList(A);
   printf("\n并集是：");
   Union(A, B);
+=======
+  Intersection(A, B);
+>>>>>>> 80e2f9eb531533168205961d972fb2f5f9c82d5f
   printfLinkList(A);
   system("pause");
   return 0;
