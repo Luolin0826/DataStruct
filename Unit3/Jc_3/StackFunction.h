@@ -67,7 +67,7 @@ void Destroy_SeqStack(PSeqStakck* S) {
 //打印输出栈
 void Printf_SeqStack(PSeqStakck S) {
   int tmp;
-  for (int i = 0; i <= S->top; i++) {
+  for (int i = S->top; i >= 0; i--) {//注意输出的顺序，只能从一端输出
     tmp = S->data[i];
     printf("%d\t", tmp);
   }

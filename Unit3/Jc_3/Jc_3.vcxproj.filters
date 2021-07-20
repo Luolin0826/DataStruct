@@ -18,6 +18,15 @@
     <ClCompile Include="Jc_3_1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Wd_3_1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Jc_3_3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Jc_3_4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StackFunction.h">

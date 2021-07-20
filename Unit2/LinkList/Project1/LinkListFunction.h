@@ -173,7 +173,11 @@ bool printfLinkList(LinkList L) {
   ElemType e = 0;
   while (L->next != NULL) {
     e = L->next->data;
+<<<<<<< HEAD
     printf("%d\t", e);
+=======
+    printf("%d", e);
+>>>>>>> 80e2f9eb531533168205961d972fb2f5f9c82d5f
     L = L->next;
   }
   return true;

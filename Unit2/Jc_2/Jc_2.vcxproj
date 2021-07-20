@@ -146,10 +146,14 @@
     <ClCompile Include="..\LinkList\Project1\Jc_2_3.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Jc_2_4.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Jc_2_5.cpp" />
+=======
+    <ClCompile Include="Jc_2_4.cpp" />
+>>>>>>> 80e2f9eb531533168205961d972fb2f5f9c82d5f
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

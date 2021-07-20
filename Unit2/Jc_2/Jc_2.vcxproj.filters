@@ -26,8 +26,11 @@
     <ClCompile Include="Jc_2_4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Jc_2_5.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+=======
+>>>>>>> 80e2f9eb531533168205961d972fb2f5f9c82d5f
   </ItemGroup>
 </Project>
