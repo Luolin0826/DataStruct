@@ -105,7 +105,7 @@ int infix_exp_value(char* infixexp, char* postfixexp) {
     } else {
       if ((GetTop_SeqStack_c(S, &c), c) == '(' && w ==')') {//遇到界限符且两个括号连再一次 去除括号
         Pop_SeqStcak_c(S, &TopElement);
-        w = *(++infixexp);
+        w = *(++infixexp);//去除括号后直接看下一个
       } else {
         if ((GetTop_SeqStack_c(S, &c), c) == '('||priority((GetTop_SeqStack_c(S, &c), c))<priority(w) ) {//栈顶元素为（或者栈内符号优先级小于当前运算符优先级 入栈
           Push_SeqStack_c(S, w);
@@ -114,6 +114,8 @@ int infix_exp_value(char* infixexp, char* postfixexp) {
           Pop_SeqStcak_c(S, &TopElement);//栈中符号优先级大于等于当前运算的优先级 出栈 加到后缀表达式
           *postfixexp = TopElement;
           postfixexp++;
+          //此处思考一下为什么没有W=...了？
+          //在这个if循环里，我们要取出所有栈中优先级大于等于当前运算符的 符号 ，直到找到一个不如现在的为止，所以不用加，找到了自然在上一个if里就会增加了
         }
       }
     }
@@ -125,6 +127,10 @@ int infix_exp_value(char* infixexp, char* postfixexp) {
 }
 
 int main(int argc, char** argv) {
+  char a[] = "(1+3)*5+(5*6)/5#";
+  char arry[20];
+  infix_exp_value(a, arry);
+  printf("%s", arry);
   system("pause");
   return 0;
 }
