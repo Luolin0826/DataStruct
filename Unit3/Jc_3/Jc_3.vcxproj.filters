@@ -27,9 +27,27 @@
     <ClCompile Include="Jc_3_4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Jc_3_4_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Jc_3_5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Jc_3_6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Jc_3_9.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Jc_3_10.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StackFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueFunction.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
