@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="String.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Strindex.cpp">
+    <ClCompile Include="Glist.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

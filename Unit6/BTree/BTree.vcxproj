@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{da71be71-d744-48b8-8a2c-89ab036576bc}</ProjectGuid>
-    <RootNamespace>String</RootNamespace>
+    <ProjectGuid>{203fed29-b238-417b-bb1d-a6f4c07dc013}</ProjectGuid>
+    <RootNamespace>BTree</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,10 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Strindex.cpp" />
-    <ClCompile Include="String.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="BTree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="QueueFunction.h" />
+    <ClInclude Include="StackFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

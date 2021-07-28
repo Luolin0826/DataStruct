@@ -15,11 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="String.cpp">
+    <ClCompile Include="BTree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Strindex.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StackFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
