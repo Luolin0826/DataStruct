@@ -1,11 +1,11 @@
 #pragma once
 #pragma warning(disable : 6386)
-#include <stdio.h>
-#include <string.h>
 #include <stdbool.h>
+#include <stdio.h>
 #include <stdlib.h>
-#define Maxsize 20
-#define DataType char
+#include <string.h>
+#define Maxsize 30
+#define DataType int
 //定义结构体
 typedef struct {
   DataType data[Maxsize];

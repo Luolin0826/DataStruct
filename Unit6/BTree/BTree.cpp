@@ -20,7 +20,7 @@ typedef struct bnode {
 
 //显示二叉树
 void Visit(BTree t) {
-  printf("%c\t", t->data);
+  printf("%c\t",t->data);
 }
 //递归算法
 //先序遍历
@@ -47,7 +47,7 @@ void PostOrder(BTree t) {
     Visit(t);
   }
 }
-
+/*
 //非递归算法
 //前序遍历 中 左 右
 void PerOrder_s(BTree t) {
@@ -122,6 +122,8 @@ void LevelOrder(BTree t) {
     }
   }
 }
+*/
+
 
 //计算深度
 int TreeDepth(BTree T) {
@@ -133,8 +135,71 @@ int TreeDepth(BTree T) {
     return l > r ? l + 1 : r + 1;
   }
 }
+//计算二叉树节点个数 
+//方法一 采用前序遍历 存储在全局变量count中
+int count = 0;
+void Count_Tree(BTree t) {
+  if (t) {
+    Count_Tree(t->lchild);
+    Visit(t);
+    count++;
+    Count_Tree(t->rchild);
+  }
+}
+//方法二 分别计算 然后返回
+int Count(BTree t) {
+  int lcount, rcount;
+  if (t==NULL) {
+    return 0;
+  }
+  lcount = Count(t->lchild);
+  rcount = Count(t->rchild);
+  return lcount + rcount + 1;
+}
+//二叉树复制
+//分别复制树的根节点，左子树，右子树 最后合到一起
+BTree CopyTree(BTree t) {
+  if (t==NULL) {
+    return (NULL);
+  } 
+    BTree p, q, s;
+    p = CopyTree(t->lchild);//p存储左子树
+    q = CopyTree(t->rchild);//q存右子树
+    s = (Bnode *)malloc(sizeof(Bnode));//给s开辟新空间
+    s->data = t->data;
+    s->lchild = p;
+    s->rchild = q;
+    return s;
+}
+//创建二叉链表存储的二叉树
+//利用先序序列构造二叉树
+BTree CreateBinTree() {
+  BTree t;
+  char ch = getchar();
+  if (ch =='#') {
+    t = NULL;
+  } else {
+    t = (Bnode*)malloc(sizeof(Bnode));//分配空间
+    t->data = ch;
+    t->lchild = CreateBinTree();//构造二叉树的左子树
+    t->rchild = CreateBinTree();//构造右子树
+  }
+  return t;//返回根节点对应的指针
+}
+//求二叉树每层的节点个数
+//利用数组进行存储，数组的下标代表层数，存储的值代表那一层的节点数
+void LevCount(BTree t, int l, int num[]) {
+  if (t) {
+    Visit(t);
+    num[l]++;
+    LevCount(t->lchild, l + 1, num);//求下一层的节点数
+    LevCount(t->rchild, l + 1, num);
+  }
+}
 
 int main(int argc, char** argv) {
+  BTree t = CreateBinTree();
+  Visit(t);
   system("pause");
   return 0;
 }

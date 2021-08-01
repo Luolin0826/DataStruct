@@ -1,10 +1,11 @@
 #pragma once
+#pragma warning(disable : 6386)
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #define MaxSize 20
-#define DataType Bnode
+#define DataType char
 typedef struct {
   DataType data[MaxSize];  //申请一个数组空间
   int top;                 //指向栈顶的下标-1
