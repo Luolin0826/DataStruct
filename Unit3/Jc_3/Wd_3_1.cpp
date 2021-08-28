@@ -8,9 +8,9 @@
 typedef struct {
   DataType data[MaxSize];  //申请一个数组空间
   int top;                 //指向栈顶的下标-1
-} SeqStack_c, *PSeqStakck_c;
+} SeqStack_c, *PSeqStack_c;
   //入栈 x存储输入的值
-int Push_SeqStack_c(PSeqStakck S, char x) {
+int Push_SeqStack_c(PSeqStack S, char x) {
   if (S->top == MaxSize - 1) {
     return 0;
   } else {
@@ -19,7 +19,7 @@ int Push_SeqStack_c(PSeqStakck S, char x) {
   }
 }
 //出栈 x存储删除的值 因为要带值回去，所以设置成指针形式
-int Pop_SeqStcak_c(PSeqStakck S, char* x) {
+int Pop_SeqStcak_c(PSeqStack S, char* x) {
   if (Empyt_SeqStack(S)) {
     return 0;
   } else {
@@ -30,7 +30,7 @@ int Pop_SeqStcak_c(PSeqStakck S, char* x) {
 }
 //符号匹配函数 判断函数中的符号是否成双成对
 int bracketCheker(char str[], int length) {
-  PSeqStakck S = Init_SeqStack();  //初始化栈
+  PSeqStack S = Init_SeqStack();  //初始化栈
   for (int i = 0; i < length; i++) {
     if (str[i] == '(' || str[i] == '[' || str[i] == '{') {
       Push_SeqStack_c(S, str[i]);  //扫描左括号 入栈

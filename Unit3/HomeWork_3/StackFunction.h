@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define DataType int
-#define MaxSize 10
+#define DataType char
+#define MaxSize 30
 typedef struct {
   DataType data[MaxSize];  //申请一个数组空间
   int top;                 //指向栈顶的下标-1
@@ -67,9 +67,9 @@ void Destroy_SeqStack(PSeqStack* S) {
 //打印输出栈
 void Printf_SeqStack(PSeqStack S) {
   int tmp;
-  for (int i = S->top; i >= 0; i--) {//注意输出的顺序，只能从一端输出
+  for (int i = S->top; i >= 0; i--) {  //注意输出的顺序，只能从一端输出
     tmp = S->data[i];
-    printf("%d\t", tmp);
+    printf("%c\t", tmp);
   }
 }
 

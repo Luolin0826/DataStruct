@@ -7,7 +7,7 @@
 void DelRepeated(LinkList L) {
   LinkList p, q, tmp, pre;
   p = L->next;
-  if (p==NULL) {
+  if (p == NULL) {
     return;
   }
   while (p) {
@@ -29,6 +29,27 @@ void DelRepeated(LinkList L) {
   }
 }
 
+void DelList(LinkList L) {
+  Lnode *s, *p, *q;
+  p = L;
+  s = p;
+  q = p->next;
+  while (s->next != NULL) {
+    while (q!= NULL) {
+      if (s->data != q->data) {
+        q = q->next;
+        p = p->next;
+      } else {
+        p->next = q->next;
+        q = q->next;
+      }
+    }
+    s = s->next;
+    p = s;
+    q = p->next;
+  }
+}
+
 int main(int argc, char** argv) {
   LinkList L;
   L = Creat_LinkList();
@@ -36,7 +57,8 @@ int main(int argc, char** argv) {
   for (int i = 0; i < 15; i++) {
     ListInsert(L, i + 1, a[i]);
   }
-  DelRepeated(L);
+  // DelRepeated(L);
+  DelList(L);
   PrintfList(L);
   system("pause");
   return 0;
