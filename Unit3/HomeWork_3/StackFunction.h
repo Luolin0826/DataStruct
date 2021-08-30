@@ -20,7 +20,7 @@ PSeqStack Init_SeqStack(void) {
   return S;  //返回指针地址
 }
 //判栈空 1表示空 0 表示非空
-int Empyt_SeqStack(PSeqStack S) {
+int Empty_SeqStack(PSeqStack S) {
   if (S->top == -1) {
     return 1;
   } else {
@@ -38,7 +38,7 @@ int Push_SeqStack(PSeqStack S, DataType x) {
 }
 //出栈 x存储删除的值 因为要带值回去，所以设置成指针形式
 int Pop_SeqStcak(PSeqStack S, DataType* x) {
-  if (Empyt_SeqStack(S)) {
+  if (Empty_SeqStack(S)) {
     return 0;
   } else {
     *x = S->data[S->top];  //因为要带值回去
@@ -48,7 +48,7 @@ int Pop_SeqStcak(PSeqStack S, DataType* x) {
 }
 //取栈顶指针
 int GetTop_SeqStack(PSeqStack S, DataType* x) {
-  if (Empyt_SeqStack(S)) {
+  if (Empty_SeqStack(S)) {
     return 0;
   } else {
     *x = S->data[S->top];  //因为要带值回去

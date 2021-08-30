@@ -30,9 +30,7 @@ void GetNext(SString s, int next[]) {
   next[1] = 0;
   while (i < s[0]) {
     if (s[i] == s[j] || j == 0) {
-      i++;
-      j++;
-      next[i] = j;
+      next[++i] = ++j;
     } else {
       j = next[j];
     }
@@ -82,13 +80,16 @@ void StrAssign(SString T, char* chars) {
 
 int main(int argc, char** argv) {
   SString S1, T;
-  char str1[10] = "maanshan";
-  char str2[3] = "an";
+  char str1[20] = "maanshanxueyuan";
+  char str2[13] = "xxyxy";
   StrAssign(S1, str1);
   StrAssign(T, str2);
+  /*
   int bf = Strindex_bf(S1, T);
+    printf("bfÆ¥Åä%d\n", bf);
+  */
+
   int kmp = Strindex_kmp(S1, T);
-  printf("bfÆ¥Åä%d\n", bf);
   printf("kmpÆ¥Åä%d\n", kmp);
   system("pause");
   return 0;

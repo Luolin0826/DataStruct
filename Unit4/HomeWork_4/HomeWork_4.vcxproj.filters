@@ -33,15 +33,9 @@
     <ClCompile Include="Jc_5_6.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Jc_5_7.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_8.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StackFunction.h">
+    <ClInclude Include="StringFunction.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
