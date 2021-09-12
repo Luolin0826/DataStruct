@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{883a8cf5-00e4-4e4f-ada0-c45eb9f44380}</ProjectGuid>
-    <RootNamespace>HomeWork5</RootNamespace>
+    <ProjectGuid>{a6c6f789-62f1-48e2-8ea0-32f7e57840d6}</ProjectGuid>
+    <RootNamespace>HomeWork6</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -145,19 +145,11 @@
     <ClCompile Include="Jc_5_2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Jc_5_3.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="Jc_5_5.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="Jc_5_6.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="Jc_5_7.cpp" />
+    <ClCompile Include="Jc_5_3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GListFunction.h" />
+    <ClInclude Include="BTreeFunction.h" />
+    <ClInclude Include="StackFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,100 +1,72 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#define MaxSize 10
-#define  DataType int
-typedef struct {
-  DataType data[MaxSize];//ÉêÇëÒ»¸öÊı×é¿Õ¼ä
-  int top;//Ö¸ÏòÕ»¶¥µÄÏÂ±ê-1
-}SeqStack,*PSeqStakck;
+void inc_ldkz()
+{
+  if (K4 == 0) //æœ‰äººåœ¨
+  {
+    counter2 = 0;
+    counter1++;
+    if (counter1 < 3)
+    {
+      bl1 = 1;
+    }
+    else
+    {
+      bl1 = counter1 - 2;
+      if (bl1 > 5)
+      {
+        bl1 = 5;
+      }
+    }
+    switch (bl1)
+    {
+    case 1:
+      P2 = 0x0f;
+      break;
+    case 2:
+      P2 = 0x07;
+      break;
+    case 3:
+      P2 = 0x03;
+      break;
+    case 4:
+      P2 = 0x01;
+      break;
+    case 5:
+      P2 = 0x00;
+      break;
+    }
+  }
+  else
+  {
+    counter1 = 0;
+    counter2++;
+    if (counter2 > 5)
+    {
+      bl2 = counter2 - 5;
+      if (bl2 > 5)
+      {
+        bl2 = 5;
+      }
 
-//³õÊ¼»¯Õ»¿Õ
-PSeqStakck Init_SeqStack(void) {
-  PSeqStakck S;//¶¨ÒåÒ»¸öÖ¸ÏòË³ĞòÕ»µÄÖ¸Õë
-  S = (SeqStack*)malloc(MaxSize * sizeof(SeqStack));//·ÖÅä¿Õ¼ä
-  if (S) {
-    S->top = -1;//³õÊ¼Õ»¶¥Ö¸Ïò-1
+      switch (bl2)
+      {
+      case 1:
+        P2 |= 0x01;
+        break;
+      case 2:
+        P2 |= 0x02;
+        break;
+      case 3:
+        P2 |= 0x04;
+        break;
+      case 4:
+        P2 |= 0x08;
+        ;
+        break;
+      case 5:
+        P2 |= 0x10;
+        ;
+        break;
+      }
+    }
   }
-  return S;//·µ»ØÖ¸ÕëµØÖ·
-}
-//ÅĞÕ»¿Õ 1±íÊ¾¿Õ 0 ±íÊ¾·Ç¿Õ
-int Empyt_SeqStack(PSeqStakck S) {
-  if (S->top==-1) {
-    return 1;
-  } else {
-    return 0;
-  }
-}
-//ÈëÕ» x´æ´¢ÊäÈëµÄÖµ
-int Push_SeqStack(PSeqStakck S, DataType x) {
-  if (S->top==MaxSize-1) {
-    return 0;
-  } else {
-    S->data[++S->top] = x;
-    return 1;
-  }
-}
-//³öÕ» x´æ´¢É¾³ıµÄÖµ ÒòÎªÒª´øÖµ»ØÈ¥£¬ËùÒÔÉèÖÃ³ÉÖ¸ÕëĞÎÊ½
-int Pop_SeqStcak(PSeqStakck S, DataType *x) {
-  if (Empyt_SeqStack(S)) {
-    return 0;
-  } else {
-    *x = S->data[S->top];//ÒòÎªÒª´øÖµ»ØÈ¥
-    S->top--;
-    return 1;
-  }
-}
-//È¡Õ»¶¥Ö¸Õë
-int GetTop_SeqStack(PSeqStakck S, DataType* x) {
-  if (Empyt_SeqStack(S)) {
-    return 0;
-  } else {
-    *x = S->data[S->top];  //ÒòÎªÒª´øÖµ»ØÈ¥
-    return 1;
-  }
-}
-//Ïú»ÙÕ» ÓÉÓÚÒªĞŞ¸ÄÕ»µÄÖ¸Õë±äÁ¿£¬ËùÒÔÒª½«Ö¸ÕëµØÖ·´«¸øº¯Êı£¬ÒÀ´ÎÊÍ·Å£¬×îºó½²Ë³ĞòÕ»Ö¸Õë¸³0
-void Destroy_SeqStack(PSeqStakck *S) {
-  if (*S) {
-    free(*S);
-  } else {
-    *S = NULL;
-  }
-}
-//´òÓ¡Êä³öÕ»
-void Printf_SeqStack(PSeqStakck S) {
-  int tmp;
-  for (int i = 0; i <= S->top ; i++) {
-    tmp = S->data[i];
-    printf("%d\t", tmp);
-  }
-}
-
-int main(int argc, char** argv) {
-  PSeqStakck S;
-  DataType tmp;
-  S = Init_SeqStack();
-  for (int i = 0; i < 10; i++) {
-    Push_SeqStack(S, i);
-  }
-  printf("³õÊ¼Õ»ÊÇ");
-  Printf_SeqStack(S);
-  printf("\n");
-
-  printf("È¡Õ»¶¥Ö¸Õë£º");
-  GetTop_SeqStack(S,&tmp);
-  printf("%d",tmp);
-  printf("\n");
-
-  printf("³öÕ»ºó£º");
-  Pop_SeqStcak(S,&tmp);
-  Printf_SeqStack(S);
-  printf("\n");
-
-  printf("ÈëÕ»ºó£º");
-  Push_SeqStack(S, 5);
-  Printf_SeqStack(S);
-  printf("\n");
-  system("pause");
-  return 0;
 }
