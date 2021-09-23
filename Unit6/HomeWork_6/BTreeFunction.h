@@ -3,9 +3,9 @@
 #include <string.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#define DataType char
+#define ElemType char
 typedef struct bnode {
-  DataType data;
+  ElemType data;
   struct bnode *lchild, *rchild;
 } Bnode, *BTree;
 //创建二叉链表存储的二叉树

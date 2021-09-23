@@ -4,13 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include "BTreeFunction.h"
+#include "BTreeFunction.h"
+#define DataType BTree
 #define MaxSize 20
-typedef struct {
-  Bnode* node;
-  int flag;//0表示第一次出栈 1 表示第二次出栈
-}ElementType;
-#define DataType ElementType
+/*
+*  typedef struct {
+Bnode* node;
+int flag;  // 0表示第一次出栈 1 表示第二次出栈
+}
+ElementType;
+*/
 typedef struct {
   DataType data[MaxSize];  //申请一个数组空间
   int top;                 //指向栈顶的下标-1
