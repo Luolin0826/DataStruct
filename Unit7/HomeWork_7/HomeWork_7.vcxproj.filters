@@ -21,36 +21,18 @@
     <ClCompile Include="Jc_5_2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Jc_5_3.cpp">
+    <ClCompile Include="Jc_5_3_MGraph.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Jc_5_4.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_5.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_6.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_7.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_8.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_9.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_10.cpp">
+    <ClCompile Include="Jc_5_3_ALGraph.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BTreeFunction.h">
+    <ClInclude Include="MGraphFunction.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="StackFunction.h">
+    <ClInclude Include="ALGraphFunction.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="QueueFunction.h">
