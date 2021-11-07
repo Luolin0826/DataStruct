@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include "ALGraphFunction.h"
-#include "QueueFunction.h"	
+#include "QueueFunction.h"
 typedef enum { False, True }boolean;
 boolean visited[MaxVertexNum];
 //深度遍历寻找两结点之间的路径
@@ -53,12 +53,8 @@ int IsPath_BFS(ALGraph* G, int i, int j) {
 	return 0;
 }
 
-
-
 int main(int argc, char** argv)
 {
-
 	system("pause");
 	return 0;
 }
-

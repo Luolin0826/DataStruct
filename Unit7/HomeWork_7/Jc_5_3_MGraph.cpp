@@ -10,9 +10,9 @@ boolean visited[MaxVertexNum];
 int IsPath_DFS(MGraph* G, int i, int j) {
 	int k;
 	visited[i] = True;//已被访问
-	for ( k = 0; k < G->VertexNum; k++)
+	for (k = 0; k < G->VertexNum; k++)
 	{
-		if (G->arcs[i][k]=1&&!visited[k])//相通并且没有被访问
+		if (G->arcs[i][k] = 1 && !visited[k])//相通并且没有被访问
 		{
 			if (k == j)
 			{
@@ -34,9 +34,9 @@ int IsPath_BFS(MGraph* G, int i, int j) {
 	while (!Empty_SeqQueue(Q))
 	{
 		Out_SeqQueue(Q, &i);
-		for ( k = 0; k < G->VertexNum; k++)
+		for (k = 0; k < G->VertexNum; k++)
 		{
-			if (G->arcs[i][k]==1&&!visited[k])//两顶点连通且没有被访问
+			if (G->arcs[i][k] == 1 && !visited[k])//两顶点连通且没有被访问
 			{
 				if (k == j) {
 					return 1;
@@ -51,8 +51,6 @@ int IsPath_BFS(MGraph* G, int i, int j) {
 
 int main(int argc, char** argv)
 {
-
 	system("pause");
 	return 0;
 }
-

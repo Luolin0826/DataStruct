@@ -21,37 +21,8 @@
     <ClCompile Include="Jc_5_2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Jc_5_3_MGraph.cpp">
+    <ClCompile Include="Jc_5_3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Jc_5_3_ALGraph.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_4_MGraph.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_4_ALGraph.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_5.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Jc_5_6.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="MGraphFunction.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ALGraphFunction.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="QueueFunction.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="StackFunction.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

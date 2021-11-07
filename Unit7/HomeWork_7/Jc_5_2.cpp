@@ -64,7 +64,6 @@ int AddArc(ALGraph* G, VertexType X, VertexType Y) {
 	}
 }
 
-
 //删除一个节点
 int DelVertex(ALGraph* G, VertexType X) {
 	int i = -1, j, k;
@@ -127,7 +126,6 @@ int DelVertex(ALGraph* G, VertexType X) {
 	}
 	return 1;
 }
-
 
 //删除一条边
 //删除adjlist[i].firstedge为头指针的链表中删除值为j的边表结点
